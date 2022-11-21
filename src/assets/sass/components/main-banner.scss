@@ -1,0 +1,95 @@
+.main-banner{
+    background-image: url("./../images/banner-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 691px;
+    padding: 71px 0 100px 0;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+    @media(max-width: 992px){
+        min-height: 555px;
+        padding: 20px 0;
+        background-position: -600px -170px;
+        background-size: auto;
+    }
+
+
+    .black-shadow{
+        background: rgb(0,0,0,0.25);
+        background: linear-gradient(0deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+        display: block;
+        z-index: 1;
+    }
+
+    .white-shadow{
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        display: block;
+        z-index: 2;
+
+        @media(max-width: 992px){
+            height: 100px;
+        }
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: rem(48px);
+        text-shadow: $text-shadow;
+        font-weight: bold;
+        max-width: 538px;
+        line-height: 125%;
+        z-index: 3;
+
+        @media(max-width: 992px){
+            font-size: rem(33px);
+            max-width: 80%;
+            text-shadow: none;
+            margin-bottom: 44px;
+        }
+
+    }
+    
+    p{
+        text-shadow: $text-shadow;
+        margin-top: auto;
+        color: #FFFFFF;
+        max-width: 378px;
+        font-size: rem(18px);
+        z-index: 3;
+
+        @media(max-width: 992px){
+            margin-top: 0;
+        }
+    }
+
+    .btn{
+        margin-top: 55px;
+        align-self: flex-start;
+        z-index: 3;
+
+        @media(max-width: 992px){
+            position: relative;
+            margin-top: auto;
+            bottom: 0;
+            top: -10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

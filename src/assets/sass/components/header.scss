@@ -1,0 +1,85 @@
+.header{
+
+    &__top{
+        background-color: $green-dark;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width: 992px){
+            display: none;
+        }
+
+        span{
+            &:first-child{
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-size: rem(13px);
+                margin-right: 21px;
+            }
+
+            &.phone, &.whatsapp{
+                &:before{
+                    content: " ";
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    position: relative;
+                    top: 4px;
+                    margin-right: 5px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+
+            &.phone{
+                &:before{
+                    background-image: url("./../images/icon-phone.svg");
+                    width: 12px;
+                    top: 4px;
+                }
+            }
+
+            &.whatsapp{
+                &:before{
+                    background-image: url("./../images/icon-whatsapp.svg");
+                    top: 3px;
+                    width: 15px;
+                }
+            }
+
+            color: $yellow-dark;
+            margin: 0 12px 0 0;
+            font-size: rem(16px);
+        }
+    }
+
+    &__main{
+        background-color: $green;
+        height: 87px;
+
+        @media(max-width: 992px){
+            height: 57px;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo{
+            @media(max-width: 992px){
+                figure{
+                    height: 26.47px;
+                    img{
+                        height: 26.47px;
+                    }
+                }
+            }
+        }
+    }
+}

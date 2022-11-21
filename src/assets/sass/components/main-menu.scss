@@ -1,0 +1,89 @@
+.main-menu{
+
+    @media(max-width: 992px){
+        display: none;
+    }
+
+
+    a{
+        color: #FFFFFF;
+        font-size: rem(16px);
+        text-decoration: none;
+        margin-left: 6px;
+        padding: 8px 16px;
+        height: 40px;
+        font-weight: 600;
+        border: 1px solid transparent;
+
+        &:hover, &.active{
+            border: 1px solid $yellow;
+            border-radius: 4px;
+        }
+
+        &.customer-area-link{
+            position: relative;
+            &:before{
+                content: '';
+                background-image: url("./../images/icon-user.svg");
+                border-radius: 3px;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 3.5px;
+                margin-right: 5px;
+                position: relative;
+            }
+
+            &:after{
+                content: '';
+                background-image: url("./../images/icon-arrow-right.svg");
+                border-radius: 3px;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 2px;
+                margin-left: 5px;
+                position: relative;
+            }
+
+            &:hover, &.active{
+                border-color: transparent;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.main-menu-mobile{
+    display: none;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: rem(14px);
+    text-decoration: none;
+    position: relative;
+    padding-right: 20px;
+
+    &:after{
+        content: " ";
+        background-image: url("./../images/icon-arrow-down-white.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        width: 12px;
+        height: 6px;
+        position: absolute;
+        right: 0;
+        top: 8px;
+    }
+
+    @media(max-width: 992px){
+        display: block;
+    }
+}

@@ -1,0 +1,27 @@
+.btn{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: rem(19px);
+    background-color: $black;
+    padding: 11.5px 34px;
+    height: 52px;
+    line-height: 150%;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15)
+;    
+    &.btn-primary{
+        background-color: $primary;
+    }
+
+    &.btn-secondary{
+        background-color: $green-light;
+        font-size: rem(9px);
+        padding: 10.52px 19.65px;
+        color: $primary;
+        text-decoration: underline;
+        height: 36px;
+        box-shadow: none;
+        line-height: rem(14px);
+    }
+}

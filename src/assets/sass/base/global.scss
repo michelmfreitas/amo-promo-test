@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+figure{
+    margin: 0;
+    img{
+        width: 100%;
+    }
+}
+
+$text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+
+.box-flex{
+    display: flex;
+    >div{
+        padding: 1rem;
+        flex-basis: 50%;
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media(max-width: 992px){
+            flex-basis: 100%;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+.text-featured{
+    margin-bottom: 40px;
+
+    @media(max-width: 992px){
+        margin-bottom: calc(40px - 16px);
+    }
+
+    p, span{
+        font-size: rem(20px);
+        line-height: 150%;
+        color: $secondary;
+        font-weight: bold;
+
+        @media(max-width: 992px){
+            text-align: center;
+        }
+
+        &.phone{
+            position: relative;
+            &:before{
+                content: " ";
+                background-image: url("./../images/icon-phone-green.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: -35px;
+            }
+        }
+    }
+}
+
+.btn-container{
+    text-align: center;
+    .btn{
+        display: inline-block;
+    }
+}
+
+.desktop-view{
+    display: block;
+    @media(max-width: 992px){
+        display: none;
+    }
+}
+
+.mobile-view{
+    display: none;
+    @media(max-width: 992px){
+        display: block;
+    }
+}
