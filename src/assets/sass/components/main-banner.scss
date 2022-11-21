@@ -12,6 +12,9 @@
     @media(max-width: 992px){
         min-height: 555px;
         padding: 20px 0;
+    }
+
+    @media(max-width: 768px){
         background-position: -600px -170px;
         background-size: auto;
     }
@@ -57,10 +60,13 @@
         z-index: 3;
 
         @media(max-width: 992px){
-            font-size: rem(33px);
             max-width: 80%;
-            text-shadow: none;
             margin-bottom: 44px;
+        }
+
+        @media(max-width: 768px){
+            font-size: rem(33px);
+            text-shadow: none;
         }
 
     }
